@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
-  <head>
-    
+<head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,20 +11,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <style>
-      
-      body {
-        background-color: #ccc;
-      }
+        body {
+            background-color: #ccc;
+        }
 
-      .card-bg-style {
-        filter: brightness(20%);
-      }
-
+        .card-bg-style {
+            filter: brightness(20%);
+        }
     </style>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
     <script>
         var currTone = null;
@@ -37,60 +35,58 @@
         toneA.loop = true;
         var toneE = new Audio('tones/E5.mp3');
         toneE.loop = true;
-
-
     </script>
 
     <div class="container">
-    
-      <div class="card bg-dark text-white mt-4" style="width: 1296px; height: 800px; box-shadow: 1px 4px 12px #666666;">
 
-        <img src="images/violin_bg.webp" class="card-img card-bg-style" alt="violin">
+        <div class="card bg-dark text-white mt-4" style="width: 1296px; height: 800px; box-shadow: 1px 4px 12px #666666;">
 
-        <div class="card-img-overlay">
-          <div class="row">
-            <div class="col text-center">
-              
-              <img src="images/violin_illustration.png" alt="violin" style="height: 760px;" usemap="#map-ill">
+            <img src="images/violin_bg.webp" class="card-img card-bg-style" alt="violin">
 
-              <map name="map-ill">
-                <area shape="circle" coords="330,154,30" id="area-g" href="#" alt="G3" onclick="toggleTone('G')">
-                <area shape="circle" coords="330,243,30" id="area-d" href="#" alt="D4" onclick="toggleTone('D')">
-                <area shape="circle" coords="330,330,30" id="area-a" href="#" alt="A4" onclick="toggleTone('A')">
-                <area shape="circle" coords="330,420,30" id="area-e" href="#" alt="E5" onclick="toggleTone('E')">
-              </map>
+            <div class="card-img-overlay">
+                <div class="row">
+                    <div class="col text-center">
 
-            </div>
-            <div class="col">
+                        <img src="images/violin_illustration.png" alt="violin" style="height: 760px;" usemap="#map-ill">
 
-              <div style="position: relative; height: 800px;">
+                        <map name="map-ill">
+                            <area shape="circle" coords="330,154,30" id="area-g" href="#" alt="G3" onclick="toggleTone('G')">
+                            <area shape="circle" coords="330,243,30" id="area-d" href="#" alt="D4" onclick="toggleTone('D')">
+                            <area shape="circle" coords="330,330,30" id="area-a" href="#" alt="A4" onclick="toggleTone('A')">
+                            <area shape="circle" coords="330,420,30" id="area-e" href="#" alt="E5" onclick="toggleTone('E')">
+                        </map>
 
-                <div style="height: 300px; position: absolute; top: 30%;">
+                    </div>
+                    <div class="col">
 
-                  <div class="card" style="background-color: rgba(235, 235, 235, 0.3); box-shadow: 1px 4px 12px #111111;">
-                    <div class="card-body">
-                  <h1>🎻Simple Violin Tuner</h1>
+                        <div style="position: relative; height: 800px;">
 
-                  <hr>
+                            <div style="height: 300px; position: absolute; top: 30%;">
 
-                  <p class="lead">바이올린 튜너가 없을 때 유용한 바이올린 튜너입니다</p>
-                  <p class="lead">원하는 음을 클릭하여 기준음을 재생할 수 있습니다</p>
+                                <div class="card" style="background-color: rgba(235, 235, 235, 0.3); box-shadow: 1px 4px 12px #111111;">
+                                    <div class="card-body">
+                                        <h1>🎻Simple Violin Tuner</h1>
 
-                  <hr>
+                                        <hr>
 
-                  <p class="lead mb-0"><b>Current Playing: </b> <span id="current-playing">None</span></p>
+                                        <p class="lead">바이올린 튜너가 없을 때 유용한 바이올린 튜너입니다</p>
+                                        <p class="lead">원하는 음을 클릭하여 기준음을 재생할 수 있습니다</p>
+
+                                        <hr>
+
+                                        <p class="lead mb-0"><b>Current Playing: </b> <span id="current-playing">None</span></p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
-                </div>
-
-              </div>
-
-              </div>
-
             </div>
-          </div>
+
         </div>
-
-      </div>
 
     </div>
 
@@ -103,8 +99,7 @@
                 if (currTone === tone) {
                     pauseTone(tone);
                     currTone = null;
-                }
-                else {
+                } else {
                     pauseTone(currTone);
                     playTone(tone);
                     currTone = tone;
@@ -147,6 +142,6 @@
         }
     </script>
 
-  </body>
+</body>
 
 </html>
