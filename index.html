@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Simple Violin Tuner</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <style>
+      
+      body {
+        background-color: #ccc;
+      }
+
+      .card-bg-style {
+        filter: brightness(20%);
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <script>
+        var currTone = null;
+
+        var toneG = new Audio('tones/G3.mp3');
+        toneG.loop = true;
+        var toneD = new Audio('tones/D4.mp3');
+        toneD.loop = true;
+        var toneA = new Audio('tones/A4.mp3');
+        toneA.loop = true;
+        var toneE = new Audio('tones/E5.mp3');
+        toneE.loop = true;
+
+
+    </script>
+
+    <div class="container">
+    
+      <div class="card bg-dark text-white mt-4" style="width: 1296px; height: 800px; box-shadow: 1px 4px 12px #666666;">
+
+        <img src="images/violin_bg.webp" class="card-img card-bg-style" alt="violin">
+
+        <div class="card-img-overlay">
+          <div class="row">
+            <div class="col text-center">
+              
+              <img src="images/violin_illustration.png" alt="violin" style="height: 760px;" usemap="#map-ill">
+
+              <map name="map-ill">
+                <area shape="circle" coords="330,154,30" id="area-g" href="#" alt="G3" onclick="toggleTone('G')">
+                <area shape="circle" coords="330,243,30" id="area-d" href="#" alt="D4" onclick="toggleTone('D')">
+                <area shape="circle" coords="330,330,30" id="area-a" href="#" alt="A4" onclick="toggleTone('A')">
+                <area shape="circle" coords="330,420,30" id="area-e" href="#" alt="E5" onclick="toggleTone('E')">
+              </map>
+
+            </div>
+            <div class="col">
+
+              <div style="position: relative; height: 800px;">
+
+                <div style="height: 300px; position: absolute; top: 30%;">
+
+                  <div class="card" style="background-color: rgba(235, 235, 235, 0.3); box-shadow: 1px 4px 12px #111111;">
+                    <div class="card-body">
+                  <h1>🎻Simple Violin Tuner</h1>
+
+                  <hr>
+
+                  <p class="lead">바이올린 튜너가 없을 때 유용한 바이올린 튜너입니다</p>
+                  <p class="lead">원하는 음을 클릭하여 기준음을 재생할 수 있습니다</p>
+
+                  <hr>
+
+                  <p class="lead mb-0"><b>Current Playing: </b> <span id="current-playing">None</span></p>
+                </div>
+                </div>
+
+              </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script>
+        function toggleTone(tone) {
+            if (currTone === null) {
+                playTone(tone);
+                currTone = tone;
+            } else {
+                if (currTone === tone) {
+                    pauseTone(tone);
+                    currTone = null;
+                }
+                else {
+                    pauseTone(currTone);
+                    playTone(tone);
+                    currTone = tone;
+                }
+            }
+        }
+
+        function playTone(tone) {
+            var txt = document.getElementById('current-playing');
+            if (tone === 'G') {
+                toneG.play();
+                txt.innerHTML = 'G3 (196 Hz)';
+            } else if (tone === 'D') {
+                toneD.play();
+                txt.innerHTML = 'D4 (293.66 Hz)';
+            } else if (tone === 'A') {
+                toneA.play();
+                txt.innerHTML = 'A4 (440 Hz)';
+            } else if (tone === 'E') {
+                toneE.play();
+                txt.innerHTML = 'E5 (659.25 Hz)';
+            }
+        }
+
+        function pauseTone(tone) {
+            var txt = document.getElementById('current-playing').innerHTML = 'Stopped';
+            if (tone === 'G') {
+                toneG.pause();
+                toneG.load();
+            } else if (tone === 'D') {
+                toneD.pause();
+                toneD.load();
+            } else if (tone === 'A') {
+                toneA.pause();
+                toneA.load();
+            } else if (tone === 'E') {
+                toneE.pause();
+                toneE.load();
+            }
+        }
+    </script>
+
+  </body>
+
+</html>
