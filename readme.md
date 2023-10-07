@@ -1,19 +1,47 @@
 # Simple Violin Tuner
-## Overview
-바이올린을 연주하려고 할 때마다, 바이올린 현이 풀려 있어 제대로 된 소리를 낼 수 없습니다. 
 
-특히, 저는 절대음감을 갖추지 못했고, 바이올린 튜너를 갖고 있지 않기 때문에 스스로 튜닝할 수 없습니다. 
+![svt](https://github.com/simple3068/Simple-Violin-Tuner/assets/12420779/2e023849-1af6-497d-bf59-d54de7427d89)
 
-이를 해결하기 위해 버튼 클릭으로 바이올린의 각 현의 음을 들려주는 바이올린 튜너를 만들게 되었습니다. 
+> Simple violin tuner you can simply tune your violin. 
 
-![violin_illustration](https://user-images.githubusercontent.com/12420779/132127863-6c5762b6-d1a6-4606-ace6-6551ce901bb2.png)
+This is a Chrome extension version of Simple Violin Tuner. 
 
-기준음은 다음과 같으며, MIDI에서 뽑은 바이올린 소리를 재생합니다 ([Ref.](https://pages.mtu.edu/~suits/notefreqs.html)). 
+I was so lazy to connect to the tuner page. 
 
-* G현: 196 Hz
-* D현: 293.66 Hz
-* A현: 440 Hz
-* E현: 659.25 Hz
+That concluded me to develop the chrome extension version of violin tuner. 
 
-## Let's Try
-[Simple Violin Tuner](https://simple3068.github.io/Simple-Violin-Tuner)
+## Installation
+
+First you need to turn on the [dev mode](https://developer.chrome.com/docs/extensions/mv3/faq/#faq-dev-01) on `chrome://extensions/`. 
+
+Download whole files in this repo with ZIP file, place it proper directory and unzip it. 
+
+Click the 'Load unpacked extension...' button and select the folder you just unzipped. 
+
+![image](https://github.com/simple3068/Simple-Violin-Tuner/assets/12420779/c15c304e-e202-4d73-877e-9e60d7c7db00)
+
+Ta-da! you just finished to install Simple Violin Tuner on your Chrome browser!
+
+## How to use
+
+![image](https://github.com/simple3068/Simple-Violin-Tuner/assets/12420779/b5622835-40c2-46e8-96b3-aae72f8d5595)
+
+* Click the button you want to tune. 
+* Click the button again to stop playing the tone. 
+
+I set normal violin MIDI sound as default. -- you can customize with your own. 
+
+## Customization
+
+For the more specific information, you may click the 'About..' Button right below to the extension popup. 
+
+You can change the tone sounds replacing files named with `tone#.mp3` in `/tones` directory. 
+
+Here is the prepared templates of the tone sounds you can try. 
+
+| # | Title | Description | Tune Frequency (Hz) |
+|---|-------|-------------|---------------------|
+| 1 | Violin (MIDI) | Simple violin tone sounds. (default) | G3(196)-D4(293.66)-A4(440)-E5(659.25) |
+| 2 | Cello (MIDI) | Simple cello tone sounds for the bigger instrument. users. (Why don't you try Simple Cello Tuner instead?) | C2(65.4)-G2(98)-D3(146.8)-A3(220) |
+| 3 | Violin (Pure tone) | Prepared for tuning fork lovers.   | G3(196)-D4(293.66)-A4(440)-E5(659.25) |
+| 4 | Baroque tuned Violin (Pure tone) | For those blessed by the greatest Bach, the father of the music | G3(196)-D4(293.66)-Ab4(415)-E5(659.25) |

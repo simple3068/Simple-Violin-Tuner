@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Simple Violin Tuner</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <div class="container py-4">
+
+            <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+                <div class="container-fluid py-5">
+                  <h1 class="display-5 fw-bold">Simple Violin Tuner</h1>
+                  <figure>
+                    <blockquote class="blockquote">
+                      <p class="fs-3">Simple violin tuner you can simply tune your violin. </p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer fs-5">
+                      <cite title="Developer's name">Simple</cite>, the developer of this thing
+                    </figcaption>
+                  </figure>
+                </div>
+            </div>
+
+            <div class="p-5 mb-4">
+                <h1>How to use</h1>
+                <img src="info1.png" alt="layout">
+                <ul>
+                    <li>Just press the button you want to tune.</li>
+                </ul>
+                <img src="info2.png" alt="layout">
+                <ul>
+                    <li>Press the button again to stop tuning.</li>
+                    <li>or Press another button to tune other strings. </li>
+                </ul>
+            </div>
+
+            <div class="p-5 mb-4">
+                <h1>Customization</h1>
+                <p>You can customize your tune tone if you want. </p>
+                <p>You need to turn on the dev mode to customize - (<code>chrome://extensions/</code>)</p>
+                <p>The tone files named with <code>tone#.mp3</code> placed in <code>/tones</code> directory. You may try replacing these tone files with the templates below. </p>
+                <table class="table">
+                    <thead class="table-dark">
+                        <tr class="align-middle">
+                            <td rowspan="2">#</td>
+                            <td rowspan="2">Title</td>
+                            <td rowspan="2">Description</td>
+                            <td colspan="4" class="text-center">Tune Frequency (Hz)</td>
+                            <td rowspan="2" class="text-center">File</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Normal Violin</td>
+                            <td>Normal violin sound. (default)</td>
+                            <td>G3 (196)</td>
+                            <td>D4 (293.66)</td>
+                            <td>A4 (440)</td>
+                            <td>E5 (659.25)</td>
+                            <td class="text-center"><a style="text-decoration: none;" href="tone-violin.zip">💾</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Normal Cello</td>
+                            <td>I prepared the preset of normal cello tones just in case. </td>
+                            <td>C2 (65.4)</td>
+                            <td>G2 (98)</td>
+                            <td>D3 (146.8)</td>
+                            <td>A3 (220)</td>
+                            <td class="text-center"><a style="text-decoration: none;" href="tones-cello.zip">💾</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Pure tone - Normal Violin</td>
+                            <td>If you are familier with tuning forks, why don't you try this?</td>
+                            <td>G3 (196)</td>
+                            <td>D4 (293.66)</td>
+                            <td>A4 (440)</td>
+                            <td>E5 (659.25)</td>
+                            <td class="text-center"><a style="text-decoration: none;" href="tone-tg-normal.zip">💾</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Pure tone - Baroque Tuned Violin</td>
+                            <td>For who blessed by greatest musician Bach. </td>
+                            <td>G3 (196)</td>
+                            <td>D4 (293.66)</td>
+                            <td>A4 (415)</td>
+                            <td>E5 (659.25)</td>
+                            <td class="text-center"><a style="text-decoration: none;" href="tones-tg-baroque.zip">💾</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </body>
+</html>

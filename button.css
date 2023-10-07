@@ -1,0 +1,41 @@
+h1.title {
+  margin-left: 20px;
+  margin-bottom: 4px;
+}
+
+div.tuner-button-box {
+  width: 100px;
+  text-align: center;
+  display: inline-block;
+}
+
+div.tuner-button-box>p {
+  margin: 0 auto;
+}
+
+div.tuner-button-box>p>small {
+  color: #333;
+}
+
+button.tuner-button {
+  height: 40px;
+  width: 40px;
+  outline: none;
+  margin: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+button.tuner-button>img {
+  width: 50%;
+}
+
+button.stopped {
+  background-color: #0d6efd;
+  color: white;
+}
+
+button.playing {
+  background-color: #dc3545;
+  color: white;
+}
